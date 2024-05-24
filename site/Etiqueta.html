@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta de Alimento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 0;
+            position: relative;
+        }
+
+        /* Círculos verdes nos cantos */
+        body::before,
+        body::after {
+            content: '';
+            width: 700px; /* Ajustado */
+            height: 600px; /* Ajustado */
+            background-color: #6FCF97;
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        body::before {
+            top: -200px;
+            left: -150px;
+        }
+
+        body::after {
+            bottom: -200px;
+            right: -150px;
+        }
+
+        .container {
+            width: 350px;
+            border: 1px solid #000;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #6FCF97;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .label-section {
+            padding: 15px;
+            text-align: left;
+        }
+        .label-section .label {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .label-section .label strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .label-section .label .line {
+            border-bottom: 1px dashed #000;
+            margin: 5px 0;
+            display: inline-block;
+            width: 100%;
+        }
+        .footer {
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        .footer .print-btn {
+            background-color: #EB5757;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .quantity-control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .quantity-control button {
+            background-color: #EB5757;
+            color: #fff;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .quantity-control span {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Etiqueta</div>
+            <img src="food_icon.png" alt="Food Label">
+        </div>
+        <div class="label-section">
+            <div class="label">
+                <strong>Tomate</strong>
+                <div>Seco <span class="line"></span> 300 G</div>
+            </div>
+            <div class="label">
+                <div>Manipulação: 07/11/23 - 15:20</div>
+                <div>Validade: 10/11/23 - 15:20</div>
+                <div>Marca / Fornecedor: HORTI VIDA</div>
+            </div>
+            <div class="label">
+                <div>Lote: 1234567AB</div>
+            </div>
+            <div class="label">
+                <div>Responsável: BETINA</div>
+            </div>
+            <div class="label">
+                <div>Restaurante Sal</div>
+                <div>CNPJ: 12.345.678/0001-01</div>
+                <div>CEP: 01234-000</div>
+                <div>Avenida Paulista, 001</div>
+                <div>São Paulo, SP</div>
+            </div>
+            <div class="label">
+                <div>#KJ6KJSD</div>
+            </div>
+        </div>
+        <div class="quantity-control">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+        </div>
+        <div class="footer">
+            <button class="print-btn" onclick="window.print()">IMPRIMIR</button>
+        </div>
+    </div>
+</body>
+</html>

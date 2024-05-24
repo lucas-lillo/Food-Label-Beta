@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Inicial - Food Label</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajustando a altura do contêiner */
+        .container {
+            height: 50vh; /* Altura ajustada */
+            display: flex;
+            flex-direction: column; /* Alterado para alinhar verticalmente */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilizando os botões do menu */
+        .menu-button {
+            width: 255px;
+            padding: 15px 30px; /* Aumentando o tamanho dos botões */
+            background-color: #ffffff; /* Cor do botão (branco) */
+            color: #333333; /* Cor do texto */
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-size: 18px; /* Tamanho do texto */
+            margin: 5px; /* Espaçamento entre os botões */
+            border: none; /* Removendo a borda */
+            cursor: pointer;
+        }
+
+        .menu-button:hover {
+            background-color: #f2f2f2; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="sphere sphere1"></div>
+        <div class="sphere sphere2"></div>
+    </div>
+    <div class="container">
+        <img src="foodlabel-logo.png" alt="Logotipo" class="logo">
+        <h1>Menu Inicial</h1>
+        <!-- Adicionando botões estilizados para as opções do menu -->
+        <button class="menu-button" onclick="location.href='notificacoes.html'">Notificações</button>
+        <button class="menu-button" onclick="location.href='configuracoes.html'">Configurações</button>
+        <button class="menu-button" onclick="location.href='validade.html'">Validades</button>
+        <button class="menu-button" onclick="location.href='etiqueta.html'">Imprimir Etiqueta</button>
+    </div>
+</body>
+</html>

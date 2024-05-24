@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validade - Food Label</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a8e063, #57BD9E);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            background: #CCDDD2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .labels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .label {
+            background: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            text-decoration: none;
+            color: black;
+        }
+        .label span {
+            font-weight: bold;
+        }
+        .label .validity {
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+        .label.red::before,
+        .label.yellow::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .label.red::before {
+            background: red;
+        }
+        .label.yellow::before {
+            background: yellow;
+        }
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .sphere {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+        .sphere1 {
+            width: 300px;
+            height: 300px;
+            top: -50px;
+            left: -50px;
+        }
+        .sphere2 {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            right: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="sphere sphere1"></div>
+        <div class="sphere sphere2"></div>
+    </div>
+    <div class="container">
+        <img src="foodlabel-logo.png" alt="Logotipo" class="logo">
+        <h1>Validade das Etiquetas</h1>
+        <div class="labels">
+            <a href="Etiqueta.html" class="label yellow">
+                <span>ALFACE CRESPA</span>
+                <div class="validity">Venc: 20/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label red">
+                <span>ALFACE CRESPA ROXA</span>
+                <div class="validity">Venc: 20/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>BERINJELA</span>
+                <div class="validity">Venc: 26/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>TOMATE SALADA</span>
+                <div class="validity">Venc: 27/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label red">
+                <span>ALFACE AMERICANO</span>
+                <div class="validity">Venc: 20/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>ABOBRINHA</span>
+                <div class="validity">Venc: 26/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label red">
+                <span>TOMATE CEREJA</span>
+                <div class="validity">Venc: 20/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label yellow">
+                <span>COENTRO</span>
+                <div class="validity">Venc: 26/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label red">
+                <span>TOMATE MOLHO</span>
+                <div class="validity">Venc: 19/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>SALSINHA</span>
+                <div class="validity">Venc: 20/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>RÚCULA</span>
+                <div class="validity">Venc: 26/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>MANJERICÃO</span>
+                <div class="validity">Venc: 02/12</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>ESPINAFRE</span>
+                <div class="validity">Venc: 01/12</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>BROTO DE ALFAFA</span>
+                <div class="validity">Venc: 01/12</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>BRÓCOLIS</span>
+                <div class="validity">Venc: 22/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>TOMATE</span>
+                <div class="validity">Venc: 01/12</div>
+            </a>
+            <a href="Etiqueta.html" class="label red">
+                <span>BROTO DE FEIJÃO</span>
+                <div class="validity">Venc: 01/12</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>ASPARGOS</span>
+                <div class="validity">Venc: 02/12</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>CEBOLINHA</span>
+                <div class="validity">Venc: 25/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>HORTELÃ</span>
+                <div class="validity">Venc: 25/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>CAPIM LIMÃO</span>
+                <div class="validity">Venc: 25/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>HIBISCO</span>
+                <div class="validity">Venc: 25/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>PIMENTÃO</span>
+                <div class="validity">Venc: 25/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>ERVA MATE</span>
+                <div class="validity">Venc: 25/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>ESCAROLA</span>
+                <div class="validity">Venc: 20/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label">
+                <span>BRÓCOLIS</span>
+                <div class="validity">Venc: 24/11</div>
+            </a>
+            <a href="Etiqueta.html" class="label yellow">
+                <span>ALECRIM</span>
+                <div class="validity">Venc: 26/11</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

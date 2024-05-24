@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Food Label</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajustando a altura do contêiner */
+        .container {
+            height: 50vh; /* Altura ajustada */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilizando os links */
+        .settings-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Alterando para flex para alinhar os botões lado a lado */
+            flex-direction: column; /* Alterando a direção do flex para vertical */
+            align-items: center; /* Centralizando os itens horizontalmente */
+        }
+
+        .settings-menu li {
+            margin-bottom: 15px; /* Aumentando o espaçamento entre os botões */
+        }
+
+        .settings-menu li a {
+            display: inline-block;
+            width: 225px; /* Definindo uma largura fixa para os botões */
+            padding: 15px 30px; /* Ajustando o preenchimento vertical */
+            background-color: #ffffff; /* Cor do botão (branco) */
+            color: #333333; /* Cor do texto */
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-size: 18px; /* Tamanho do texto */
+            text-align: center; /* Centralizando o texto horizontalmente */
+        }
+
+        .settings-menu li a:hover {
+            background-color: #f2f2f2; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="sphere sphere1"></div>
+        <div class="sphere sphere2"></div>
+    </div>
+    <div class="container">
+        <img src="foodlabel-logo.png" alt="Logotipo" class="logo">
+        <h1>Configurações</h1>
+        <div class="settings-menu">
+            <ul>
+                <li><a href="#">Conta</a></li>
+                <li><a href="#">Notificações</a></li>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Segurança</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

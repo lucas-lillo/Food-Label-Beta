@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Registro de Usuário</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/StylesMain.css">
+    </head>
+    <body id="BodyRegistroUsuario">
+        <header>
+            <h1 id="H1RegistroUsuario">Registro de Usuário</h1>
+        </header>
+        <form id="FormRegistroUsuario" action="rota_pamela_aqui" method="post">
+            <div class="RegistroUsuario">
+                <p class="RegistroTexto">Insira Seu Nome Completo</p>
+                <input 
+                type="text"
+                class="InputPadrao"
+                name="NomeCompleto" 
+                id="InputNomeCompleto"
+                placeholder="Nome Completo"> <!-- Input do Nome Completo -->
+            </div>
+            <div>
+                <a href="SelecaoUsuario.html"> 
+                    <button 
+                        id="BotaoCadastroUsuario" 
+                        class="Continuar" 
+                        type="submit">Cadastrar</button> <!-- Botao de Cadastro Do Usuario-->
+                </a>
+            </div>
+            <script>
+                document.getElementById("FormRegistroUsuario").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Impede o envio padrão do formulário
+                    // Redireciona para a página desejada
+                    window.location.href = "NovaEtiqueta.html";
+                });
+            </script> 
+        </form>
+    </body>
+</html>

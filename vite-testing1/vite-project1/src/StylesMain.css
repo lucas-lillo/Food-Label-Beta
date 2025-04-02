@@ -1,0 +1,1038 @@
+/*
+    Variaveis de todas as cores usadas no aplicativo
+*/
+
+/*TODO mudar elementos svg navbar para classes dinamicas?*/
+:root {
+    --cordefundo: #57BD9E;
+    --verde1:#467D6D;
+    --branco: #fff;
+    --cinza: #bebebe;
+    --vermelho-notificacao: #E15252;
+    --vermelho-validade: #ff0000;
+    --laranja: #F9A21F;
+    --vermelho-botao: #D7494C;
+}
+
+/*
+Configuração do body padrão da página 
+*/
+
+body {
+    padding-top: 0vh;
+    background: var(--cordefundo);
+    font-family: Open Sans, Roboto, sans-serif;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#H1RegistroUsuario {
+    margin: 25px 0px 70px 0px !important;
+}
+
+
+h1 {
+    font-family: Roboto, sans-serif;
+    font-weight: 840;
+    font-style: italic;
+    color: var(--branco);
+    font-size: 50px; 
+    text-shadow: 0px 4px 1px rgba(0, 0, 0, 0.25);
+    margin: 25px 0px 30px 0px;
+}
+
+
+/*Inputs padroes do aplicativo*/
+
+.InputPadrao {
+    text-align: justify;
+    border-radius: 10px;
+    width: 438px;
+    height: 55px;
+    box-sizing: border-box;
+    border: 2px solid var(--branco);
+    line-height: 45px;
+    font-size: 20px;
+}
+
+/* Inputs especificos para as telas da criação da etiqueta*/
+
+.InputEtiqueta {
+    text-align: center;
+    border-radius: 10px;
+    width: 438px;
+    height: 55px;
+    box-sizing: border-box;
+    border: 2px solid var(--branco);
+    line-height: 45px;
+    font-size: 36px;
+    margin-bottom: 55px;
+}
+
+.InputEtiqueta::placeholder {
+    text-align: center !important; 
+    color: var(--cinza);
+    font-size: 30px !important;
+
+} 
+
+input[type="text"]::placeholder {
+    display: flex;
+    font-size: 18px;
+    position: relative;
+    left: 3%;
+    align-items: center;
+    text-align: justify;
+    line-height: 35px;
+}
+
+#InputNomeCompleto {
+    margin-bottom: 40px;
+}
+
+#DataValidade, #NovaCategoria {
+    margin-top: 20px;
+}
+
+/*Seletores específicos para tela de registro de usuário: 2*/
+#H1RegistroUsuario {
+    margin-bottom: 125px;
+}
+
+.RegistroTexto { 
+    /* display: flex; */
+    color: var(--branco);
+    font-size: 32px !important;
+    font-weight: 300;
+    margin-bottom: 50px !important;
+}
+
+
+ /* botão de continuar utilizado em quase todas as telas*/
+
+.Continuar {
+    background: var(--verde1);
+    font-weight: bold;
+    font-size: 25px;
+    width: 331px;
+    height: 62px;
+    border-radius: 15px;
+    justify-content: center;
+    color: var(--branco);
+    border: 2px solid var(--verde1);
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.Continuar:active {
+    background: var(--branco); 
+    color: var(--verde1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--branco);
+}
+
+.Continuar:hover {
+    transform: scale(1.10);
+}
+
+/*padronização da estilização de todos os textos da tag <p> do app*/
+
+p:not(#LoginTexto, #ResultadosPesquisa) {
+    text-align: center;
+    color: var(--branco);
+    width: 100%;
+    padding-left: 3px;
+    font-style: normal;
+    text-shadow: 0px 4px 1px rgba(0, 0, 0, 0.1);
+    font-size: 40px;
+    text-align: center;
+    /* margin: 10px 0px 30px 0px; */
+}
+
+/*classes das caixas que são ativadas quando as etiquetas serão excluídas ou 
+canceladas*/
+
+.CaixaCancelamentoEtiqueta, .CaixaExclusaoEtiqueta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1015px;
+    height: 600px;
+    background-color: var(--verde1);
+    border-radius: 25px;
+    display: none;
+}
+
+.CancelamentoTexto, .ExclusaoTexto {
+    font-size: 45px !important;
+    font-weight: 900;
+}
+
+.BotaoSim, .BotaoNao {
+    width: 909px;
+    height: 146px;
+    font-size: 47px;
+    font-weight: 900;
+    font-style: italic;
+    box-shadow:  0 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    cursor: pointer;
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    color: var(--branco);
+    transition: transform 0.1s ease;
+}
+
+.BotaoSim {
+    background: var(--vermelho-botao);
+    border: 2px solid var(--vermelho-botao);
+    margin-bottom: 15px;
+}
+
+.BotaoNao {
+    background: var(--cordefundo);
+    border: 2px solid var(--cordefundo);
+}
+
+.BotaoSim:hover, .BotaoNao:hover {
+    transform: scale(1.10);
+}
+
+.BotaoSim:active{
+    background: var(--branco);
+    color: var(--vermelho-botao);
+    border: 2px solid var(--branco);
+}
+
+.BotaoNao:active{
+    background: var(--branco);
+    color: var(--cordefundo);
+    border: 2px solid var(--branco);
+}
+
+
+.CriacaoEtiquetaTxt {
+    text-align: justify;
+    font-size: 100px;
+}
+
+/* botão da seleção de conservação, categoria e validade */
+
+.BotaoSelecaoConservacao { 
+    cursor: pointer;
+    background: var(--branco);
+    color: var(--verde1);
+    font-weight: bold;
+    width: 455px;
+    height: 116px;
+    border-radius: 15px;
+    justify-content: center;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--branco);
+    margin-bottom: 15px;
+    font-size: 36px;
+    transition: transform 0.1s ease;
+}
+
+.BotaoSelecaoConservacao:active {
+    background: var(--verde1);
+    color: var(--branco);
+    border: 2px solid var(--verde1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.BotaoSelecaoConservacao:hover {
+    transform: scale(1.10);
+}
+
+.SelecaoCategoria {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 5px;
+    width: 900px;
+    height: 120px;
+    gap: 5px;
+}
+
+/*Botao da quantidade de etiquetas que vao ser imprimidas
+na ultima tela de criação das etiquetas*/
+
+.BotaoMaisMenos {
+    display: flex;
+    color: var(--branco);
+    background: var(--verde1);
+    border-radius: 15px;
+    width: 220px;
+    height: 83px;
+    font-size: 100px;
+    border: 2px solid var(--verde1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease;
+}
+
+.BotaoMaisMenos:hover {
+    transform: scale(1.10);
+}
+
+.BotaoMaisMenos:active {
+    color: var(--verde1);
+    background: var(--branco);
+    border: solid 2px var(--branco);
+}
+
+.MaisMenos {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    width: 320px;
+    margin-left: 5px;
+}
+
+.Etiqueta {
+    margin-top: 10px;
+    display: flex;
+    background: var(--branco);
+    width: 666px;
+    height: 552px;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.EtiquetaPronta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*barra de navegação inferior do aplicativo*/
+
+.Navbar {
+    position: fixed; 
+    bottom: 0; 
+    width: 100%;
+    background-color: var(--branco); 
+    color: var(--cinza);
+    display: flex; 
+    justify-content: center; 
+    padding: 15px 0; 
+    gap: 55px;
+    align-items: center;
+    height: auto;
+}
+
+.LinksNavbar {
+    text-decoration: none;
+    color: var(--cinza);
+}
+
+.LinksNavbar:hover{
+    color: var(--verde1);
+}
+
+.Navbar label:hover {
+    color: var(--verde1);
+}
+
+.Navbar svg:hover {
+    color: var(--verde1);
+}
+
+/*o "menu" é o texto abaixo dos icones da barra de navegação
+do aplicativo*/
+
+.Menu {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.1s ease, color 0.3s ease;
+}
+
+.Menu:hover {
+    transform: scale(1.10);
+}
+
+.Menu:active {
+    color: var(--verde1);
+}
+
+.MenuAtivo {
+    color: var(--verde1);
+}
+
+.SvgsNavbar:hover, SvgsNavbar:active {
+    transform: scale(1.10);
+    stroke-width: 2;
+    stroke-opacity: 0.5;
+    fill: var(--verde1);
+    stroke: var(--verde1);
+}
+
+label svg {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+
+/*notificacoes da tela de notificacao*/
+
+.Notificacao {
+    width: 647px;
+    height: 266px;
+    background: var(--branco);
+    border-radius: 15px;
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 15px;
+    transition: transform 0.1s ease;
+    cursor: pointer;
+    overflow: hidden; 
+}
+
+.NotificacaoBody {
+    scrollbar-width: none;
+}
+
+ body::-webkit-scrollbar {
+    display: none;
+}
+
+.Notificacao p {
+    display: flex;
+    color: black !important;
+    text-align: justify !important;
+    text-indent: 25px;
+    text-shadow: none !important;
+}
+
+.TituloNotificacao {
+    /* padding-top: 20px; */
+    font-style: italic !important;
+    font-size: 32px !important;
+    font-weight: bold;
+}
+
+.VencimentoNotificacao {
+    font-weight: bold;
+    font-size: 24px !important;
+    text-decoration: underline;
+}
+
+.FuncResponsavelNotificacao {
+    font-size: 24px !important;
+}
+
+.DataRegistroNotificacao {
+    font-size: 20px !important;
+}
+
+.Notificacao:hover {
+    transform: scale(1.10);
+}
+
+/*classes laranja e vermelho definem a cor da notificacao (sua importância)*/
+
+.Laranja {
+    background: var(--laranja) !important;
+}
+
+.Vermelho {
+    background: var(--vermelho-notificacao);
+}
+
+.PaginaValidade {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1000px;
+}
+
+.ListaValidade ul {
+    position: relative;
+    display: flex;
+    flex-direction:row;
+}
+
+.ListaValidade ul li {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    list-style: none;
+    width: 1096px;
+    height: 83px;
+    background: var(--branco);
+    margin-bottom: 5px;
+    border-radius: 20px;
+    transition: transform 0.1s ease;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.ListaValidade ul:last-child {
+    margin-bottom: 50px !important;
+}
+
+.BotaoLixeira {
+    border-radius: 15px;
+    background: var(--branco);
+    border: 2px solid var(--branco);
+    transition: transform 0.1s ease;
+    cursor: pointer;
+
+}
+
+.ListaValidade button:hover, li:hover {
+    transform: scale(1.10);
+}
+
+#InputPesquisaEtiqueta {
+    text-align: center !important;
+    border-radius: 10px;
+    width: 300px;
+    height: 38px;
+    box-sizing: border-box;
+    border: 2px solid var(--branco);
+    line-height: 45px;
+    font-size: 24px;
+}
+
+#InputPesquisaEtiqueta::placeholder {
+    color: var(--cinza);
+    font-size: 24px;
+    text-align: center;
+}
+
+.ValidadeDentroLista {
+    color: black !important;
+    font-size: 24px !important;
+    text-shadow: none !important;
+    gap: 5px;
+}
+
+/*circulos vermelhos que aparecem do lado da lista das etiquetas
+da tela de validade*/
+
+.ElipseVermelhoValidade, .ElipseLaranjaValidade {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.MargemNavbar {
+    height: 150px;
+    color: var(--branco);
+}
+
+/*dropdown da selecao da categoria na pesquisa das etiquetas na validade*/
+
+#DropdownSelecaoCategoria {
+    width: 300px;
+    height: 38px;
+    border: 2px solid var(--branco);
+    border-radius: 10px;
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#TextoLateralCategoria {
+    font-size: 34px;
+    color: var(--branco);
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    margin-left: 25px;
+}
+
+#SvgPesquisa {
+    height: 38px;
+    margin-left: 25px;
+}
+
+#ResultadosPesquisa {
+    font-size: 34px;
+    color: var(--branco);
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.TituloEtiqueta{
+    color: black !important;
+    font-style: italic !important;
+    font-weight: bolder !important;
+    text-shadow: none !important;
+}
+
+/* seleção que separa os dados que ficariam
+justificados na esquerda em uma seleção e 
+os da direita na outra seleção, cada um contendo 
+sua própria classe para poder aplicar os estilos 
+diferentes*/
+
+/* parte direita da linha da etiqueta,
+com validade, fabricação, conservação, peso,
+lote, responsável e marca/fornecedor*/
+
+.LinhaEsquerda{ 
+    color: black !important;
+    text-shadow: none !important;
+    font-size: 24px !important;
+    /* margin-left: 15px; */
+    font-weight: bold !important;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/*parte esquerda da etiqueta, 
+com os valores de data de fabricação, validade,
+tipo de conservação, peso, etc.*/
+
+.LinhaDireita{
+    color: black !important;
+    text-shadow: none !important;
+    font-size: 24px !important;
+    /* margin-right: 40px; */
+    display: flex;
+    width: 100px;
+    height: auto;
+    justify-content: flex-end;
+}
+
+.LinhaEtiqueta {
+    display: flex;
+    flex-direction: row;
+    width: 590px;
+    height: 45px;
+    align-items: center !important;
+}
+
+.RiscoDivisoria {
+    margin-top: 20px;
+    border: none; 
+    width: 550px;
+    height: 2px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.AlinhamentoRisco {
+    display: flex;
+    width: 600px;
+    /* border: 2px solid var(--vermelho-validade); */
+}
+
+.Configuracoes button { 
+    display: flex;
+    align-items:center;
+    justify-content:justify;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    text-align: justify;
+    width: 455px;
+    height: 120px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 25px; 
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--verde1);
+    transition: transform 0.1s ease;
+}
+
+.Configuracoes a {
+    text-decoration: none;
+}
+
+.Configuracoes button svg {
+    height: auto;
+    margin: 0 30px 0 30px;
+}
+
+.Configuracoes button:hover, img:hover {
+    color: var(--cordefundo);
+    border: var(--verde1);
+    transform: scale(1.10);
+}
+
+.BotaoVoltar {
+    position: fixed;
+    left: 0;
+    top: 0%;
+    background-color: var(--cordefundo);
+    border: #57BD9E;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.BotaoVoltar svg {
+    width: 150px;
+    height: 50px;
+}
+
+.BotaoVoltar:hover {
+    transform: scale(1.10);
+}
+
+/* @media 1440px resolucao*/
+@media (max-width: 1500px)   {
+    
+    .Etiqueta {
+        margin-top: 3px !important;
+        width: 500px !important;
+        height: 400px !important;
+    }
+
+    .Etiqueta p:not(.TituloEtiqueta) {
+        font-size: 18px !important;
+    }
+    
+    .TituloEtiqueta {
+        font-size: 20px !important;
+    }
+    
+    .RiscoDivisoria {
+        width: 440px !important;
+    }
+
+    .LinhaEtiqueta {
+        width: 420px !important;
+        height: 40px !important;
+    }
+
+    .MaisMenos {
+        width: 200px !important;
+        height: 90px !important;
+    }
+
+    .BotaoMaisMenos {
+        width: 180px !important;
+        height: 65px !important;
+        font-size: 70px !important;
+    }
+
+    .Navbar {
+        height: 45px !important;
+    }
+
+    .Menu {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    label svg {
+        max-width: 30px;
+        max-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    #BotaoImprimir {
+        width: 300px;
+        height: 52px;
+    }
+
+    #TextoConservacaoProduto, #TextoCategoriaProduto {
+        margin: 15px 0px 15px 0px !important;
+    }
+
+    .BotaoSelecaoConservacao{
+        width: 450px !important;
+        height: 75px !important;
+        font-size: 25px !important;
+    }
+
+    
+    .SelecaoCategoria {
+        margin: 0px !important;
+        width: 800px !important;
+        height: 80px !important;
+        gap: 5px !important;
+    }
+    
+    .TextoCriacaoEtiqueta {
+        font-size: 35px !important;
+    }
+    
+    #NovaCategoria, #InputDataValidade {
+        margin-bottom: 30px !important;
+    }
+
+    
+}
+
+@media (max-width: 490px) {
+
+    #H1RegistroUsuario {
+        margin: 25px 0px 50px 0px !important;
+    }
+
+    .InputPadrao {
+        width: 290px;
+        height: 38px;
+    }
+
+    .InputPadrao::placeholder {
+        font-size: 20px !important;
+    }
+    
+    .Continuar {
+        width: 240px;
+        height: 52px;
+    }
+
+    #TituloSelecaoUsuario {
+        font-size: 36px !important;
+    }
+
+    h1 {
+        font-size: 40px !important;
+    }
+
+    .RegistroTexto { 
+        text-align: center;
+        font-size: 26px !important;
+    }
+
+    .TextoCriacaoEtiqueta {
+        font-size: 28px !important;
+        margin-bottom: 50px;
+    }
+
+
+    .InputEtiqueta {
+        width: 290px;
+        height: 38px;
+        padding-bottom: 10px;
+    }
+   
+    .InputEtiqueta::placeholder {
+        font-size: 20px !important;
+        text-align: center !important;
+    }
+
+    .Navbar {
+        /* padding: 15px 0; */
+        gap: 20px;
+    }
+
+    .Menu {
+        font-size: 12px;
+    }
+
+    #TextoConservacaoProduto {
+        width: 350px !important;
+    }
+
+    .BotaoVoltar svg {
+        display: none;
+        width: 110px;
+        height: 30px;
+        /* margin-bottom: 5px; */
+        padding-bottom: 5px;
+        /* background-color: transparent; */
+    }
+
+    #TextoDigiteMarcaProduto {
+        width: 280px !important;
+    }
+
+    #TextoDigiteValidadeProduto {
+        text-align: center !important;
+        font-size: 22px !important;
+        width: 250px !important;
+        margin-left: 15%;
+        margin-bottom: 10px !important;
+    }
+
+    #InputDataValidade {
+        font-size: 25px;
+        margin-top: 5px;
+        padding-top: 7px;
+    }
+
+    .BotaoSelecaoMobile {
+        width: 290px !important;
+        height: 65px !important;
+    }
+
+    .Configuracoes button { 
+        text-align: center;
+        width: 290px;
+        height: 75px;
+        margin-bottom: 18px; 
+        font-size: 20px;
+    }
+
+    .Configuracoes button svg {
+        height: 45px;
+        margin: 0 15px 0 15px;
+    }
+
+    .Notificacao {
+        width: 285px;
+        height: 180px;
+    }
+
+    .TituloNotificacao {
+        font-size: 24px !important;
+    }
+    
+    .VencimentoNotificacao {
+        font-size: 18px !important;
+    }
+
+    .FuncResponsavelNotificacao {
+        font-size: 14px !important;
+    }
+
+    .DataRegistroNotificacao {
+        font-size: 14px !important;
+    }
+
+    .PaginaValidade {
+        flex-direction: column;
+        width: 340px;
+    }
+
+    .LinhaEtiqueta {
+        /* border: 0.1px solid red; */
+        width: 270px !important;
+        height: 25px !important;
+    }
+    
+    .LinhaEsquerda  { 
+        margin-left: 0;
+        display: flex;
+        justify-content: flex-start;
+    }   
+    
+    .LinhaDireita {
+        margin-right: 0px;
+    }
+
+    .AlinhamentoRisco {
+        width: 290px;
+    }
+
+    .EtiquetaPronta {
+        margin: 5px 0px 0px 0px !important;
+    }
+
+    .Etiqueta {
+        margin: 0 auto !important;
+        width: 332px !important;
+        height: 292px !important;
+    }
+
+    .TituloEtiqueta {
+        font-size: 18px !important;
+    }
+
+    .Etiqueta p:not(.TituloEtiqueta) {
+        font-size: 13px !important;
+    }
+    
+
+    #BotaoImprimir {
+        width: 268px;
+        height: 52px;
+    }
+
+    #SvgPesquisa {
+        display: none;
+    }
+
+    .PaginaValidade {
+        width: 220px;
+        height: 180px;
+    }
+    
+    .ListaValidade ul {
+        padding: 0;
+        margin: 10px;
+    }
+
+    .ListaValidade ul li {
+        width: 285px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    #ResultadosPesquisa {
+        font-size: 26px;
+        font-weight: bold;
+        margin: 5px 0 5px 0;
+    }
+
+    .ValidadeDentroLista {
+        font-size: 16px !important;
+    }
+
+    .BotaoLixeira {
+        width: 51px;
+        height: 50px;
+    }
+
+    .BotaoLixeira svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .SelecaoCategoria {
+        width: 370px !important;
+        height: 80px !important;
+        gap: 3px !important;
+        align-content: center;
+        justify-content: center;
+        margin: 0 auto !important;
+    }
+
+    /*Classe apenas ativa para essa resolucao de tela
+    mobile*/
+    .BotaoSelecaoCategoria {
+        width: 115px !important;
+        margin-bottom: 3px !important;
+        font-size: 20px !important;
+        height: 70px !important;
+    }
+
+    #TextoCategoriaProduto {
+        font-size: 20px !important;
+    }
+
+    #DropdownSelecaoCategoria {
+        width: 300px;
+        margin: 0px;
+        font-size: 19px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); 
+    }
+
+    #InputPesquisaEtiqueta {
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); 
+
+    }
+    
+    .ElipseVermelhoValidade, .ElipseLaranjaValidade {
+        width: 19px !important;
+        height: 20px !important;
+    }
+
+    .FabricacaoOcultar {
+        display: none !important;
+    }
+}

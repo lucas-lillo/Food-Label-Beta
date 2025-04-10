@@ -3,11 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './StylesMain.css'
 import './StylesLogin.css'
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+
+  const navigate = useNavigate();
+
+  function fazerLogin() {
+    navigate('/SelecaoUsuario');
+  }
   
   return ( 
     <>
+<body className="BodyLogin">
   <div className="LoginLogo">
     {" "}
     {/*Logo do Food Label*/}
@@ -164,17 +172,14 @@ function Login() {
       <a href="SelecaoUsuario.html">
         {" "}
         {/*Botao de "Entrar"*/}
-        <button
-          name="BotaoLogin"
-          id="BotaoEntrarLogin"
-          className="Continuar"
-          type="submit"
-        >
+        <button name="BotaoLogin" id="BotaoEntrarLogin" className="Continuar" type="submit" 
+         onClick={fazerLogin}>
           Entrar
         </button>
       </a>
     </div>
   </form>
+  </body>
 </>
   )
 }

@@ -3,8 +3,8 @@
 especifica para o body, com o objetivo
 de centralizar o conteúdo no meio da página*/
 
-body {
-    padding-top: 18vh !important;
+.BodyLogin{
+    padding-top:18vh !important;
 }
 
 #InputEmailLogin{

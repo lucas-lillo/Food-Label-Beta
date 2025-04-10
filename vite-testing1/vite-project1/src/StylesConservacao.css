@@ -1,0 +1,11 @@
+.SelecaoConservacao {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 900px;
+    height: 600px;
+}
+
+#BotaoContinuarConservacao {
+    margin-top: 15px;
+}
